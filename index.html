@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote Generator</title>
+    <link rel="website icon" href="images.jpg">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lucide@latest/dist/umd/lucide.css">
+</head>
+
+<body class="min-h-screen flex items-center justify-center text-white font-[Poppins] relative overflow-hidden">
+    <!-- Enhanced Particles and 3D Orbs for Body Animation -->
+    <div class="particle w-4 h-4 top-0 left-10"></div>
+    <div class="particle w-5 h-5 top-0 right-20" style="animation-delay: 2s;"></div>
+    <div class="particle w-3 h-3 bottom-0 left-30" style="animation-delay: 4s;"></div>
+    <div class="particle w-6 h-6 top-50 left-50" style="animation-delay: 6s;"></div>
+    <div class="particle w-4 h-4 top-20 right-30" style="animation-delay: 8s;"></div>
+    <div class="particle w-5 h-5 bottom-30 right-10" style="animation-delay: 10s;"></div>
+    <!-- 3D Rotating Orbs -->
+    <div class="orb w-8 h-8 top-10 left-1/4"></div>
+    <div class="orb w-10 h-10 bottom-20 right-1/4" style="animation-delay: 5s;"></div>
+    <!-- 3D Floating Elements in White and Navy -->
+    <div class="absolute top-10 left-10 w-12 h-12 bg-white/60 rounded-full floating-3d" style="animation-delay: 0s;"></div>
+    <div class="absolute top-20 right-20 w-14 h-14 bg-blue-900/50 rounded-full floating-3d" style="animation-delay: 1s;"></div>
+    <div class="absolute bottom-20 left-20 w-10 h-10 bg-black/55 rounded-full floating-3d" style="animation-delay: 2s;"></div>
+    <div class="absolute bottom-10 right-10 w-13 h-13 bg-blue-800/60 rounded-full floating-3d" style="animation-delay: 0.5s;"></div>
+
+    <div class="bg-black/95 backdrop-blur-2xl rounded-3xl shadow-2xl p-10 text-center w-[90%] max-w-md relative z-10 quote-container border border-white/20">
+        <!-- Smaller box like original, back to max-w-md and p-10 -->
+        <!-- Fun 3D Icon and Title -->
+        <div class="flex items-center justify-center mb-6">
+            <i data-lucide="sparkles" class="w-8 h-8 text-white mr-3 icon-3d"></i>
+            <h1 class="text-2xl font-bold text-white title-3d">AI Quote Generator</h1>
+            <!-- Smaller title back to original size -->
+        </div>
+
+        <!-- Quote Section with Enjoyable Hover -->
+        <div class="mb-6 p-6 bg-gray-900/60 rounded-2xl border border-gray-600 quote-section">
+            <p id="quote" class="text-lg leading-relaxed font-light italic text-white">
+                Click below to generate a quote...
+            </p>
+            <span id="author" class="block mt-4 text-sm text-gray-300 font-medium"></span>
+        </div>
+
+        <!-- Improved Sleek Button -->
+        <button id="generateBtn" class="generate-btn py-3 px-6 rounded-xl font-medium text-sm w-full">
+            <i data-lucide="zap" class="w-5 h-5 inline mr-2"></i>
+            Generate Quote
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

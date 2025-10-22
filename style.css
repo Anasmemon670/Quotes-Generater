@@ -1,0 +1,229 @@
+/* Enhanced 3D Effects, Improved Button, Better Body Animations, and Fun Effects with White, Navy Blue & Black Theme */
+
+body {
+    perspective: 1500px;
+    background: linear-gradient(135deg, #ffffff 0%, #000080 50%, #000000 100%);
+    /* White to navy blue to black gradient */
+    animation: bodyFlowEnhanced 15s ease-in-out infinite;
+    /* Enhanced flow with subtle shifts */
+}
+
+@keyframes bodyFlowEnhanced {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 25% 75%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 75% 25%;
+    }
+}
+
+.quote-container {
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.8s ease;
+}
+
+.quote-container:hover {
+    transform: translateY(-10px) translateZ(15px) scale(1.02);
+    /* Moderate lift */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 0, 128, 0.4);
+    /* Navy glow */
+    animation: funBounce 1s ease-in-out;
+}
+
+@keyframes funBounce {
+    0%,
+    100% {
+        transform: translateY(-10px) translateZ(15px) scale(1.02);
+    }
+    50% {
+        transform: translateY(-15px) translateZ(20px) scale(1.03);
+    }
+}
+
+@keyframes float3DAdvanced {
+    0%,
+    100% {
+        transform: translateY(0px) rotateY(0deg) rotateX(0deg);
+    }
+    25% {
+        transform: translateY(-30px) rotateY(90deg) rotateX(10deg);
+    }
+    50% {
+        transform: translateY(-20px) rotateY(180deg) rotateX(0deg);
+    }
+    75% {
+        transform: translateY(-25px) rotateY(270deg) rotateX(-10deg);
+    }
+}
+
+.floating-3d {
+    animation: float3DAdvanced 8s ease-in-out infinite;
+    transform-style: preserve-3d;
+}
+
+.generate-btn {
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.6s ease;
+    /* Smoother transition */
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, #ffffff, #000080);
+    /* White to navy gradient for a clean look */
+    border: 2px solid #000000;
+    /* Black border for definition */
+    color: #000000;
+    /* Black text for contrast */
+}
+
+.generate-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(0, 0, 128, 0.3);
+    /* Navy ripple for subtlety */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.generate-btn:hover::before {
+    width: 250px;
+    height: 250px;
+}
+
+.generate-btn:hover {
+    transform: translateZ(20px) scale(1.05) rotateY(5deg);
+    /* Subtle 3D lift */
+    box-shadow: 0 15px 30px rgba(0, 0, 128, 0.6), 0 0 15px rgba(255, 255, 255, 0.2);
+    /* Balanced glow */
+    animation: btnPulseSubtle 1s ease-in-out infinite;
+    /* Subtle pulse */
+    border-color: #ffffff;
+    /* White border on hover */
+}
+
+@keyframes btnPulseSubtle {
+    0%,
+    100% {
+        transform: translateZ(20px) scale(1.05) rotateY(5deg);
+    }
+    50% {
+        transform: translateZ(22px) scale(1.07) rotateY(7deg);
+    }
+}
+
+.generate-btn:active {
+    transform: translateZ(10px) scale(1.02);
+}
+
+.icon-3d {
+    transform: rotateY(20deg) rotateX(5deg);
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.icon-3d:hover {
+    transform: rotateY(60deg) rotateX(10deg) scale(1.2);
+    animation: sparkle 0.5s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%,
+    100% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.5) drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    }
+}
+
+.title-3d {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9), 0 0 15px rgba(255, 255, 255, 0.5);
+    transform: translateZ(10px);
+}
+
+.quote-section {
+    transform: translateZ(8px);
+    transition: transform 0.6s ease;
+}
+
+.quote-section:hover {
+    transform: translateZ(12px) scale(1.01);
+    animation: gentleGlow 1.2s ease-in-out infinite;
+}
+
+@keyframes gentleGlow {
+    0%,
+    100% {
+        box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+}
+
+
+/* Enhanced Particle Effects with 3D in White and Navy */
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, rgba(0, 0, 128, 0.3) 70%);
+    animation: particleFloat3D 15s linear infinite;
+    transform-style: preserve-3d;
+}
+
+@keyframes particleFloat3D {
+    0% {
+        transform: translateY(100vh) translateZ(0px) rotate(0deg) scale(0.5);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.9;
+        transform: translateY(60vh) translateZ(10px) rotate(0deg) scale(1);
+    }
+    50% {
+        opacity: 0.9;
+        transform: translateY(0vh) translateZ(20px) rotate(180deg) scale(1);
+    }
+    90% {
+        opacity: 0.9;
+        transform: translateY(-60vh) translateZ(10px) rotate(270deg) scale(1);
+    }
+    100% {
+        transform: translateY(-100vh) translateZ(0px) rotate(360deg) scale(0.5);
+        opacity: 0;
+    }
+}
+
+
+/* Additional 3D Rotating Orbs in White and Navy */
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 128, 0.5));
+    animation: orbRotate 10s linear infinite;
+    transform-style: preserve-3d;
+}
+
+@keyframes orbRotate {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) translateZ(50px);
+    }
+    50% {
+        transform: rotateX(180deg) rotateY(180deg) translateZ(100px);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) translateZ(50px);
+    }
+}
